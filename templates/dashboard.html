@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Upload UPI Screenshot</h2>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="screenshot" required>
+    <button type="submit">Upload</button>
+</form>
+<script>
+  navigator.geolocation.getCurrentPosition(function(position) {
+    fetch('/save_location', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+        })
+    });
+});
+</script>
+<a href="/upload_history">View Upload History</a><br>
+<a href="/logout">Logout</a>
+{% endblock %}

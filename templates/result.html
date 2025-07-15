@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+{% block content %}
+<h3>OCR Extracted Text</h3>
+<div style="font-size: 18px; background-color: #1a2332; padding: 15px; border-radius: 10px;">
+    {% for line in text.split('\n') %}
+    {% if ":" in line %}
+        {% set parts = line.split(':', 1) %}
+        {% if parts[1].strip() and parts[1].strip().lower() != 'none' %}
+            <p><strong>{{ parts[0].replace('_', ' ').title() }}</strong>: {{ parts[1].strip() }}</p>
+        {% endif %}
+    {% endif %}
+    {% endfor %}
+</div>
+
+<h3>Prediction Result</h3>
+<div style="font-size: 20px; font-weight: bold; background: #2a3b59; padding: 15px; border-radius: 10px;">
+    {{ prediction }}
+</div>
+<a href="/dashboard">Go Back</a>
+{% endblock %}

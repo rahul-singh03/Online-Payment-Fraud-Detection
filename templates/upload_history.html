@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Upload History{% endblock %}
+
+{% block content %}
+<h2>Upload History</h2>
+
+{% for item in uploads %}
+<div class="card">
+    <p><strong>Image:</strong> {{ item.filename }}</p>
+    <p><strong>Uploaded At:</strong> {{ item.timestamp }}</p>
+    <p><strong>Result:</strong> {{ item.result }}</p>
+    <p><strong>Location:</strong> {{ item.location }}</p>
+    {% if item.location != "Unknown" %}
+    <a href="https://www.google.com/maps?q={{ item.location }}" target="_blank">View in Google Maps</a>
+    {% endif %}
+</div>
+{% endfor %}
+{% if uploads %}
+    <form action="/clear_history" method="GET">
+        <button style="margin-top: 20px; background-color: #f44336;" onclick="return confirm('Are you sure you want to clear all upload history?')">
+            Clear Upload History
+        </button>
+    </form>
+{% endif %}
+<a href="/dashboard">← Back to Dashboard</a>
+{% endblock %}

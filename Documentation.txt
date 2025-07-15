@@ -1,0 +1,8 @@
+Install Requirements:
+pip install pandas numpy scikit-learn flask
+
+pip install flask flask-login pytesseract opencv-python joblib
+
+https://github.com/UB-Mannheim/tesseract/wiki
+
+pip install flask_sqlalchemy

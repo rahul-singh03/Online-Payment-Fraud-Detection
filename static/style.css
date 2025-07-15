@@ -1,0 +1,66 @@
+/* static/style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b1120;
+    color: #fff;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: #1e2a47;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #58B2C9;
+  }
+  
+  input, button, select, option {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  input[type="file"] {
+    background-color: #7B9EBA;
+    color: #000;
+  }
+  
+  button {
+    background-color: #58B2C9;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #4a9cae;
+  }
+  
+  a {
+    color: #58B2C9;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .card {
+    background-color: #1a2332;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
