@@ -69,3 +69,8 @@ We published two research papers at different stages of this project:
 > **Note:** The two papers reflect different project stages — the first conceptual, the second post-implementation. Not all proposed features could be integrated due to time and resource constraints, but the core objective was achieved.
 
 ---
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+---
